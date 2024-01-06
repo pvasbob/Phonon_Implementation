@@ -1,0 +1,64 @@
+&general
+    fam_mode = 'STR'
+    hfb_input_filename = 'solution.hfb'
+    fam_output_filename = 'F-K0.out'
+    log_filename = 'F-K0.log'
+/
+
+&ext_field
+    operator_name = 'F-'
+    k = 0
+    compute_crossterms = .true.
+/
+
+&interaction
+    interaction_name = 'SKOP'
+    force_j2_terms = .false.
+    require_gauge_invariance = .true.
+    require_self_consistency = .false.
+    vpair_t0 = 0.0
+    vpair_t1 = ,
+    override_cs0 = 115.683
+    override_csr = 0.0
+    override_cds = 0.0
+    override_ct = ,
+    override_cgs = ,
+    override_cf = ,
+/
+
+&contour_parameters
+    q_value = -1
+    nr_points = 59
+    rot_correction = -1.0
+    include_endpoint = .false.
+    rotate_contour = .false.
+    contour_anchor = 0.0
+    use_gauleg_contour = .true.
+    ratint_psi_gl_points = 15
+    ratint_points = 20
+/
+
+&str_parameters
+    energy_start = 0.1
+    energy_step = 0.02
+    nr_points = 1
+    half_width = 0.25
+/
+
+&findmax_parameters
+    energy_start = 20.0
+    search_step = 2.0
+    max_points = 20
+    half_width = 5.0
+    delta = 0.002
+    energy_tolerance = 0.005
+/
+
+&solver
+    max_iter = 300
+    broyden_history_size = 50
+    convergence_epsilon = 1e-07
+    energy_shift_prot = 0.0
+    energy_shift_neut = 0.0
+    quench_residual_int = 1.0
+/

@@ -1,0 +1,92 @@
+pnfam_WX.f90(31): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(2*WX_sum_nd, 2*WX_sum_nd) :: WX_matpnbasisN11_E101, WX_matpnbasisP11_E101
+--------------------------------------------------^
+pnfam_WX.f90(41): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matPdX, Ph_matPdXg, Ph_matXNc, Ph_matXNcg  
+---------------------------------------------^
+pnfam_WX.f90(42): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matPdY, Ph_matPdYg, Ph_matYNc, Ph_matYNcg  
+---------------------------------------------^
+pnfam_WX.f90(46): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matX, Ph_matY, Ph_matWX, Ph_matWY                             
+---------------------------------------------^
+pnfam_WX.f90(47): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matPPdXg, Ph_matXNcgN, Ph_matPXNcg, Ph_matPdXgN   
+---------------------------------------------^
+pnfam_WX.f90(48): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matPPdYg, Ph_matYNcgN, Ph_matPYNcg, Ph_matPdYgN    
+---------------------------------------------^
+pnfam_WX.f90(50): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      complex dimension(Ph_sum_db**2)  :: WgreenX                                                         
+---------------------------------------^
+pnfam_WX.f90(51): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+      complex dimension(Ph_sum_db**2)  :: WgreenY                                                         
+---------------------------------------^
+pnfam_WX.f90(858): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+     complex dimension(Ph_sum_db**2), intent(out)  :: WgreenX(:)                                                         
+---------------------------------------------------^
+pnfam_WX.f90(879): error #5082: Syntax error, found '::' when expecting one of: / , * <END-OF-STATEMENT> ;
+     complex dimension(Ph_sum_db**2), intent(out)  :: WgreenY(:)                                                         
+---------------------------------------------------^
+pnfam_WX.f90(41): error #6417: The dimensions of this array have been defined more than once.   [DIMENSION]
+      Complex dimension(Ph_sum_db,Ph_sum_db) :: Ph_matPdX, Ph_matPdXg, Ph_matXNc, Ph_matXNcg  
+--------------^
+pnfam_WX.f90(256): error #6410: This name has not been declared as an array or a function.   [PH_MATX]
+                          Ph_matX(inbrc, inbcc)=ReX(ct2)+cunit*ImX(ct2)             
+--------------------------^
+pnfam_WX.f90(287): error #6410: This name has not been declared as an array or a function.   [PH_MATY]
+                          Ph_matY(inbrc, inbcc)=ReY(ct2)+cunit*ImY(ct2)       !modify35          
+--------------------------^
+pnfam_WX.f90(328): error #6410: This name has not been declared as an array or a function.   [PH_MATPDX]
+                             Ph_matPdX(inbrc,inbcc)= Ph_matPdX(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(365): error #6410: This name has not been declared as an array or a function.   [PH_MATPDY]
+                             Ph_matPdY(inbrc,inbcc)= Ph_matPdY(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(366): error #6362: The data types of the argument(s) are invalid.   [CONJG]
+                                                       conjg(WX_matpnbasisP11_E101(qqk,inbrc))*conjg(Ph_matY(qqk,inbcc))
+-----------------------------------------------------------------------------------------------------^
+pnfam_WX.f90(390): error #6410: This name has not been declared as an array or a function.   [PH_MATPDXG]
+                Ph_matPdXg(qqi,qqj)=Ph_matPdX(qqi,qqj)*WgreenX(i)
+----------------^
+pnfam_WX.f90(390): error #6410: This name has not been declared as an array or a function.   [WGREENX]
+                Ph_matPdXg(qqi,qqj)=Ph_matPdX(qqi,qqj)*WgreenX(i)
+-------------------------------------------------------^
+pnfam_WX.f90(391): error #6410: This name has not been declared as an array or a function.   [PH_MATPDYG]
+                Ph_matPdYg(qqi,qqj)=Ph_matPdY(qqi,qqj)*WgreenY(i)
+----------------^
+pnfam_WX.f90(391): error #6410: This name has not been declared as an array or a function.   [WGREENY]
+                Ph_matPdYg(qqi,qqj)=Ph_matPdY(qqi,qqj)*WgreenY(i)
+-------------------------------------------------------^
+pnfam_WX.f90(415): error #6410: This name has not been declared as an array or a function.   [PH_MATPPDXG]
+                             Ph_matPPdXg(inbrc,inbcc)= Ph_matPPdXg(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(450): error #6410: This name has not been declared as an array or a function.   [PH_MATPPDYG]
+                             Ph_matPPdYg(inbrc,inbcc)= Ph_matPPdYg(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(487): error #6410: This name has not been declared as an array or a function.   [PH_MATXNC]
+                             Ph_matXNc(inbrc,inbcc)= Ph_matXNc(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(522): error #6410: This name has not been declared as an array or a function.   [PH_MATYNC]
+                             Ph_matYNc(inbrc,inbcc)= Ph_matYNc(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(523): error #6362: The data types of the argument(s) are invalid.   [CONJG]
+                                                     conjg(Ph_matY(inbrc,qqk))*conjg(WX_matpnbasisN11_E101(qqk,inbcc)) 
+-----------------------------------------------------------^
+pnfam_WX.f90(547): error #6410: This name has not been declared as an array or a function.   [PH_MATXNCG]
+                Ph_matXNcg(qqi,qqj)=Ph_matXNc(qqi,qqj)*WgreenX(i)
+----------------^
+pnfam_WX.f90(547): error #6410: This name has not been declared as an array or a function.   [WGREENX]
+                Ph_matXNcg(qqi,qqj)=Ph_matXNc(qqi,qqj)*WgreenX(i)
+-------------------------------------------------------^
+pnfam_WX.f90(548): error #6410: This name has not been declared as an array or a function.   [PH_MATYNCG]
+                Ph_matYNcg(qqi,qqj)=Ph_matYNc(qqi,qqj)*WgreenY(i)
+----------------^
+pnfam_WX.f90(548): error #6410: This name has not been declared as an array or a function.   [WGREENY]
+                Ph_matYNcg(qqi,qqj)=Ph_matYNc(qqi,qqj)*WgreenY(i)
+-------------------------------------------------------^
+pnfam_WX.f90(572): error #6410: This name has not been declared as an array or a function.   [PH_MATXNCGN]
+                             Ph_matXNcgN(inbrc,inbcc)= Ph_matXNcgN(inbrc,inbcc) + &
+-----------------------------^
+pnfam_WX.f90(896): catastrophic error: Too many errors, exiting
+compilation aborted for pnfam_WX.f90 (code 1)
